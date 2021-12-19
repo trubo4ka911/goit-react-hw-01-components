@@ -30,6 +30,9 @@ h2 {
   padding-bottom: 24px;
   margin: 20px 0 30px 20px;
 }
+.profile {
+  margin: 20px auto;
+}
 .avatar {
   width: 150px;
   margin: auto;
@@ -44,6 +47,7 @@ li {
 .stat-list,
 .item {
   display: flex;
+  justify-content: space-around;
 }
 
 .item {
