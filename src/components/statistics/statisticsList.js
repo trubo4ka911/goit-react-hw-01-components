@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-
+import { StatTitle, StatList } from "./Statistics.styled";
 import StatisticListItem from "./statisticsListItem";
 
 const StatisticsList = ({ title, items }) => {
   return (
     <div>
-      {title && <h2>{title}</h2>}
-      <ul className="stat-list">
+      {title && <StatTitle>{title}</StatTitle>}
+      <StatList>
         {items.map((item) => (
           <StatisticListItem
             key={item.id}
@@ -14,7 +14,7 @@ const StatisticsList = ({ title, items }) => {
             percentage={item.percentage}
           />
         ))}
-      </ul>
+      </StatList>
     </div>
   );
 };

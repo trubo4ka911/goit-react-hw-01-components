@@ -3,14 +3,16 @@ import data from "./data/data.json";
 import friends from "./data/friends.json";
 import Transactions from "./data/transactions.json";
 
-import Profile from "./components/social-profil";
+import { Container } from "./App.styled";
+
+import Profile from "./components/social/SocialProfil";
 import Statistics from "./components/statistics/statistics";
 import FriendList from "./components/friends/friends";
 import TransactionHistory from "./components/transactions/transactions";
 
 const App = () => {
   return (
-    <div>
+    <Container>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -21,7 +23,7 @@ const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <FriendList items={friends} />
       <TransactionHistory items={Transactions} />;
-    </div>
+    </Container>
   );
 };
 

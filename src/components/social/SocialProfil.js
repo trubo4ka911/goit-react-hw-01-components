@@ -1,31 +1,31 @@
-// import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+import { ProfileUser, Avatar, Stats, StatsList } from "./Socials.styled";
 
 const Profile = ({ username, avatar, tag, location, stats }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt={username} className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+    <ProfileUser>
+      <div>
+        <Avatar src={avatar} alt={username} />
+        <p>{username}</p>
+        <p>{tag}</p>
+        <p>{location}</p>
       </div>
 
-      <ul className="stats">
-        <li>
+      <Stats>
+        <StatsList>
           <span className="label">Followers: </span>
           <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
+        </StatsList>
+        <StatsList>
           <span className="label">Views: </span>
           <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
+        </StatsList>
+        <StatsList>
           <span className="label">Likes: </span>
           <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+        </StatsList>
+      </Stats>
+    </ProfileUser>
   );
 };
 Profile.propTypes = {
@@ -33,9 +33,11 @@ Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: {
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  },
 };
 
 export default Profile;

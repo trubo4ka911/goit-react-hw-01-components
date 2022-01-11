@@ -1,6 +1,6 @@
-@import-normalize;
+import styled from "@emotion/styled";
 
-body {
+export const Container = styled.body`
   margin: 0;
   color: #757575;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -8,13 +8,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-h2 {
-  text-align: center;
-  text-transform: uppercase;
-}
+`;

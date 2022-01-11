@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
+import { TransactionTbodyTd, TransactionTbodyTr } from "./Transactions.styled";
 
 const TransactionsItem = ({ id, type, amount, currency }) => {
   return (
-    <tr key={id}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TransactionTbodyTr key={id}>
+      <TransactionTbodyTd>{type}</TransactionTbodyTd>
+      <TransactionTbodyTd>{amount}</TransactionTbodyTd>
+      <TransactionTbodyTd>{currency}</TransactionTbodyTd>
+    </TransactionTbodyTr>
   );
 };
 TransactionsItem.propTypes = {

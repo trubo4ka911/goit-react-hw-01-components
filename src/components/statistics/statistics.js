@@ -1,9 +1,10 @@
 import StatisticsList from "./statisticsList";
+import { StatTitle } from "./Statistics.styled";
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      {title && <h2>{title}</h2>}
+    <section>
+      {title && <StatTitle>{title}</StatTitle>}
       <StatisticsList items={stats} />
     </section>
   );
